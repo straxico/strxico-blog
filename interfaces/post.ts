@@ -5,6 +5,7 @@ type PostType = {
   date: string
   shortContent?:string
   content?: string
+  categories?:string[]
 }
 
 export default PostType

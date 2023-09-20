@@ -6,13 +6,14 @@ type Props = {
   date: string
   shortContent: string
   slug: string
+  categories:string[]
 }
 
 const PostPreview = ({
   title,
   shortContent,
   date,
-  slug,
+  slug,categories
 }: Props) => {
   return (
     <div>
@@ -28,6 +29,9 @@ const PostPreview = ({
       <p className='text-lg leading-relaxed mb-4'>{shortContent}</p>
       <div className="text-lg mb-4">
         <DateFormatter dateString={date} />
+      </div>
+      <div className='text-lg mb-4'>
+        {categories?.join?.(" | ")}
       </div>
     </div>
   )
